@@ -4653,6 +4653,9 @@ rd_kafka_CreateTopics (rd_kafka_t *rk,
  *
  * @param errstrp is set to a human-readable error string, if there was an
  *        error.
+ *
+ * @remark This is equivalent and interchangable to rd_kafka_event_error() and
+ *         rd_kafka_event_error_string() on a RD_KAFKA_EVENT_CREATETOPICS_RESULT event.
  */
 RD_EXPORT rd_kafka_resp_err_t
 rd_kafka_CreateTopics_result_error (
@@ -4745,6 +4748,9 @@ void rd_kafka_DeleteTopics (rd_kafka_t *rk,
  *
  * @param errstrp is set to a human-readable error string, if there was an
  *        error.
+ *
+ * @remark This is equivalent and interchangable to rd_kafka_event_error() and
+ *         rd_kafka_event_error_string() on a RD_KAFKA_EVENT_DELETETOPICS_RESULT event.
  */
 RD_EXPORT rd_kafka_resp_err_t
 rd_kafka_DeleteTopics_result_error (
@@ -4877,6 +4883,9 @@ rd_kafka_CreatePartitions (rd_kafka_t *rk,
  *
  * @param errstrp is set to a human-readable error string, if there was an
  *        error.
+ *
+ * @remark This is equivalent and interchangable to rd_kafka_event_error() and
+ *         rd_kafka_event_error_string() on a RD_KAFKA_EVENT_CREATEPARTITIONS_RESULT event.
  */
 RD_EXPORT rd_kafka_resp_err_t
 rd_kafka_CreatePartitions_result_error (
@@ -5158,6 +5167,9 @@ void rd_kafka_AlterConfigs (rd_kafka_t *rk,
  *
  * @param errstrp is set to a human-readable error string, if there was an
  *        error.
+ *
+ * @remark This is equivalent and interchangable to rd_kafka_event_error() and
+ *         rd_kafka_event_error_string() on a RD_KAFKA_EVENT_ALTERCONFIGS_RESULT event.
  */
 RD_EXPORT rd_kafka_resp_err_t
 rd_kafka_AlterConfigs_result_error (
@@ -5241,6 +5253,9 @@ void rd_kafka_DescribeConfigs (rd_kafka_t *rk,
  *
  * @param errstrp is set to a human-readable error string, if there was an
  *        error.
+ *
+ * @remark This is equivalent and interchangable to rd_kafka_event_error() and
+ *         rd_kafka_event_error_string() on a RD_KAFKA_EVENT_DESCRIBECONFIGS_RESULT event.
  */
 RD_EXPORT rd_kafka_resp_err_t
 rd_kafka_DescribeConfigs_result_error (
@@ -5258,9 +5273,6 @@ RD_EXPORT const rd_kafka_ConfigResource_t **
 rd_kafka_DescribeConfigs_result_resources (
         const rd_kafka_DescribeConfigs_result_t *result,
         size_t *cntp);
-
-
-
 
 /**@}*/
 
