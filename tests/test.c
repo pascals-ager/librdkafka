@@ -3937,7 +3937,7 @@ test_wait_topic_admin_result (rd_kafka_queue_t *q,
         rd_kafka_event_t *rkev;
         size_t i;
         const rd_kafka_topic_result_t **terr = NULL;
-        size_t terr_cnt;
+        size_t terr_cnt = 0;
         int errcnt = 0;
         rd_kafka_resp_err_t err;
 
@@ -3977,6 +3977,7 @@ test_wait_topic_admin_result (rd_kafka_queue_t *q,
 
         } else {
                 TEST_FAIL("Bad evtype: %d", evtype);
+                RD_NOTREACHED();
         }
 
         for (i = 0 ; i < terr_cnt ; i++) {
